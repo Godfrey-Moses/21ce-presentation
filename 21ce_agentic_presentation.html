@@ -24,10 +24,11 @@
 
         /* Large, centered, clean headings */
         .section-heading {
-            font-size: 3rem;
+            font-size: 3.5rem; /* Slightly larger for CEO impact */
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 1.5rem;
+            color: var(--color-primary-text); /* Ensure high contrast */
         }
 
         /* Sub-headings and body text clarity */
@@ -43,30 +44,47 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.75rem 1.5rem;
+            padding: 0.8rem 2rem;
             font-weight: 600;
-            border-radius: 9999px; /* Fully rounded */
-            transition: all 0.2s ease-in-out;
+            border-radius: 9999px; 
+            transition: all 0.3s ease-in-out; /* Smoother transition */
             border: 1px solid var(--color-primary-text);
             background-color: var(--color-primary-text);
             color: var(--color-white);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .apple-button:hover {
-            opacity: 0.9;
-            transform: scale(1.05);
+            opacity: 0.95;
+            transform: translateY(-2px) scale(1.02); /* Subtle lift and scale */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
 
-        /* Feature Cards */
+        /* Feature Cards - Enhanced for premium feel and subtle hover */
         .feature-card {
             background-color: var(--color-white);
             border-radius: 1.5rem;
             padding: 2.5rem;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s;
         }
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(-8px); /* Deeper lift */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* More prominent shadow */
+        }
+        
+        /* Trust Diagram Styling */
+        .trust-diagram-item {
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            opacity: 0.95;
+            transition: all 0.3s ease-in-out;
+        }
+        .trust-diagram-item:hover {
+            opacity: 1;
+            transform: scale(1.03);
+            background-color: #EFEFF1; /* Light hover effect */
         }
 
     </style>
@@ -76,150 +94,150 @@
     <!-- Header Navigation (Minimalist) -->
     <header class="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold text-gray-900">21ce.ai</div>
+            <div class="text-xl font-bold tracking-tight" style="color: var(--color-primary-text);">21ce.ai</div>
             <div class="space-x-8 text-sm font-medium hidden sm:flex">
-                <a href="#vision" class="hover:text-gray-500">Vision</a>
-                <a href="#trust" class="hover:text-gray-500">Trust Engine</a>
-                <a href="#impact" class="hover:text-gray-500">Impact</a>
-                <a href="#value" class="hover:text-gray-500">ROI</a>
+                <a href="#vision" class="hover:text-gray-500 transition-colors duration-200">The Mandate</a>
+                <a href="#trust" class="hover:text-gray-500 transition-colors duration-200">Trust Engine</a>
+                <a href="#impact" class="hover:text-gray-500 transition-colors duration-200">Use Cases</a>
+                <a href="#value" class="hover:text-gray-500 transition-colors duration-200">ROI</a>
             </div>
-            <a href="#cta" class="apple-button text-sm">Book Friction Audit</a>
+            <a href="#cta" class="apple-button text-sm">Actionable Next Step</a>
         </nav>
     </header>
 
     <!-- 1. Hero Section: The Executive Thesis -->
     <section id="vision" class="min-h-screen flex items-center justify-center text-center bg-white pt-24 pb-16">
         <div class="max-w-5xl mx-auto px-4">
-            <h1 class="text-7xl md:text-8xl font-extrabold tracking-tight" style="color: var(--color-primary-text);">
+            <h1 class="text-8xl md:text-9xl font-extrabold tracking-tighter" style="color: var(--color-primary-text);">
                 The Agentic Advantage.
             </h1>
-            <p class="mt-8 text-2xl md:text-3xl font-medium text-gray-600 max-w-4xl mx-auto">
-                Move Beyond Automation. Unlock Exponential ROI by Evolving from Reactive Chatbots to <span class="text-gray-900 font-semibold">Self-Executing Digital Employees.</span>
+            <p class="mt-8 text-3xl md:text-4xl font-medium text-gray-700 max-w-4xl mx-auto">
+                The Era of <strong>Passive Automation</strong> is Over. Unlock <strong>Exponential ROI</strong> by deploying Self-Executing Digital Employees.
             </p>
             <p class="mt-6 text-lg text-gray-500 font-light max-w-3xl mx-auto">
-                — Insight from McKinsey, Google & NVIDIA.
+                — Strategic Mandate from the C-Suite: Stop Paying the Cost of Inaction.
             </p>
-            <div class="mt-12">
-                <a href="#impact" class="apple-button text-lg">See the Strategic Impact &darr;</a>
+            <div class="mt-14">
+                <a href="#impact" class="apple-button text-xl">See the Strategic Impact &darr;</a>
             </div>
         </div>
     </section>
 
     <!-- 2. The Problem: The Inaction Cost -->
-    <section class="py-24 bg-gray-50 border-t border-b border-gray-100" style="background-color: var(--color-light-gray);">
+    <section class="py-32 bg-gray-50 border-t border-b border-gray-100" style="background-color: var(--color-light-gray);">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="section-heading max-w-4xl mx-auto">
-                The Friction Trap: Why Waiting Is Burning Cash.
+            <h2 class="section-heading max-w-5xl mx-auto">
+                The Cost of Stagnation: Why Your Automation Investment Failed.
             </h2>
-            <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-                Your highest-paid talent is spending 40% of their time on 'Robot Work'. This is the cost of inaction.
+            <p class="mt-6 text-2xl text-gray-800 max-w-3xl mx-auto font-light">
+                The friction in your workflows isn't visible, but it is crippling your revenue and talent allocation.
             </p>
 
-            <div class="mt-16 grid md:grid-cols-3 gap-8">
+            <div class="mt-20 grid md:grid-cols-3 gap-8">
                 <div class="feature-card shadow-lg">
-                    <h3 class="sub-heading text-red-600">UNRECOVERED REVENUE</h3>
-                    <p class="mt-4 text-4xl font-bold">400%</p>
-                    <p class="text-lg mt-2 text-gray-600">Conversion rate drop when lead replies are delayed by > 5 minutes. Waiting means revenue walks out the door</p>
+                    <h3 class="sub-heading text-red-600 tracking-wide">LOST MOMENTUM</h3>
+                    <p class="mt-4 text-5xl font-bold">400% Loss</p>
+                    <p class="text-xl mt-3 text-gray-600">The risk of losing a high-value lead when your response time exceeds 5 minutes. Every delay burns cash and damages brand perception.</p>
                 </div>
                 <div class="feature-card shadow-lg">
-                    <h3 class="sub-heading text-red-600">HUMAN BOTTLENECK</h3>
-                    <p class="mt-4 text-4xl font-bold">1200 Hours</p>
-                    <p class="text-lg mt-2 text-gray-600">Average time wasted monthly in Finance on manual data matching (e.g., matching PO to Invoice). Expensive filing, not strategy.</p>
+                    <h3 class="sub-heading text-red-600 tracking-wide">TALENT MISALLOCATION</h3>
+                    <p class="mt-4 text-5xl font-bold">1200+ Hours</p>
+                    <p class="text-xl mt-3 text-gray-600">The human capital wasted monthly on manual data reconciliation, compliance checks, and expensive filing—not strategic growth.</p>
                 </div>
                 <div class="feature-card shadow-lg">
-                    <h3 class="sub-heading text-red-600">BLINDNESS & CATASTROPHE</h3>
-                    <p class="mt-4 text-4xl font-bold">2 Weeks</p>
-                    <p class="text-lg mt-2 text-gray-600">The advance notice an Agent gives to predict machine failure (e.g., heat or vibration data), preventing costly, unplanned downtime.</p>
+                    <h3 class="sub-heading text-red-600 tracking-wide">UNPREDICTABLE RISK</h3>
+                    <p class="mt-4 text-5xl font-bold">Unexpected Downtime</p>
+                    <p class="text-xl mt-3 text-gray-600">The price of unpredictable crises—from machine failure to supply chain disruption—that legacy systems cannot anticipate or proactively resolve.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. The Trust Engine: Context-Grounded Verification (RAG/LangChain) -->
-    <section id="trust" class="py-24 bg-white">
+    <!-- 3. The Trust Engine: Context-Grounded Verification (RAG/LangChain - HIDDEN) -->
+    <section id="trust" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 md:flex items-center space-x-16">
             <div class="md:w-1/2">
-                <span class="text-sm font-semibold text-gray-500 uppercase tracking-widest">Core Technical Differentiator (OpenAI / NVIDIA Focus)</span>
-                <h2 class="section-heading mt-4" style="font-size: 2.5rem;">
-                    The Open-Book Exam: <br>Zero-Hallucination AI.
+                <span class="text-sm font-semibold text-gray-500 uppercase tracking-widest">Our USP: The Confidence to Execute</span>
+                <h2 class="section-heading mt-4" style="font-size: 3rem;">
+                    The Trust Imperative: <br>Verified Autonomy.
                 </h2>
-                <p class="text-xl text-gray-600 mt-4">
-                    The biggest barrier to Agentic AI adoption is trust. We eliminate it. Unlike public LLMs that 'guess' from memory, our Digital Employees are grounded in a secure, verifiable truth.
+                <p class="text-2xl text-gray-900 mt-6 font-light">
+                    We eliminate the risk of "hallucination"—the single greatest barrier to enterprise AI adoption. Our agents <strong>execute</strong> because they are <strong>grounded in verifiable fact.</strong>
                 </p>
                 
-                <div class="mt-8 space-y-6">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-6 h-6 mr-4 mt-1 bg-gray-900 rounded-full"></div>
-                        <div>
-                            <h4 class="font-semibold text-lg">Context-Grounded Verification (RAG)</h4>
-                            <p class="text-gray-600">The Agent must retrieve and cite the exact paragraph, contract clause, or line-item from *your* secure proprietary data before it can act or answer.</p>
-                        </div>
+                <div class="mt-10 space-y-6">
+                    <div class="trust-diagram-item bg-gray-50">
+                        <h4 class="font-bold text-xl text-gray-900">1. The Private Knowledge Vault</h4>
+                        <p class="text-gray-600 text-lg">The agent's only textbook is your secure, proprietary data (contracts, invoices, logs). It <strong>never</strong> pulls from the public internet.</p>
                     </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-6 h-6 mr-4 mt-1 bg-gray-900 rounded-full"></div>
-                        <div>
-                            <h4 class="font-semibold text-lg">Agent Orchestration (LangChain)</h4>
-                            <p class="text-gray-600">The system uses specialized, goal-oriented chains to execute complex, multi-step actions (e.g., login to ERP, search invoice, compare to PO, then authorize payment).</p>
-                        </div>
+                    <div class="trust-diagram-item bg-gray-50">
+                        <h4 class="font-bold text-xl text-gray-900">2. Context Engine (Hidden RAG)</h4>
+                        <p class="text-gray-600 text-lg">Every action is prefaced by a verified search. The agent must retrieve and cite the <strong>exact source document</strong>—the contract clause or ERP line item—before proceeding.</p>
                     </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 w-6 h-6 mr-4 mt-1 bg-gray-900 rounded-full"></div>
-                        <div>
-                            <h4 class="font-semibold text-lg">Autonomy with Oversight</h4>
-                            <p class="text-gray-600">If a verifiable answer is not found, the agent flags the exception and routes it to the human analyst—it **cannot hallucinate** and proceed autonomously.</p>
-                        </div>
+                    <div class="trust-diagram-item bg-gray-50">
+                        <h4 class="font-bold text-xl text-gray-900">3. Action Orchestration (Hidden LangChain)</h4>
+                        <p class="text-gray-600 text-lg">The system uses specialized, intelligent pathways to sequence complex, multi-step actions across your platforms (ERP, CRM, etc.) to achieve the stated goal.</p>
                     </div>
                 </div>
             </div>
             
             <div class="md:w-1/2 mt-12 md:mt-0 relative">
                 <!-- Placeholder for the Trust Diagram -->
-                <div class="bg-gray-100 p-10 rounded-3xl shadow-2xl h-96 flex items-center justify-center">
-                    <div class="text-center">
+                <div class="bg-gray-100 p-10 rounded-3xl shadow-2xl h-full flex items-center justify-center min-h-[500px]">
+                    <div class="text-center space-y-4">
                         <p class="text-4xl font-bold text-gray-700">Proprietary Data Ingest</p>
-                        <p class="text-6xl my-4 text-gray-900">&darr;</p>
-                        <p class="text-4xl font-bold text-gray-700">Context-Grounded RAG</p>
-                        <p class="text-6xl my-4 text-gray-900">&darr;</p>
-                        <p class="text-4xl font-bold text-gray-700">Verified Action (Execute)</p>
+                        <p class="text-7xl my-4 text-gray-900 animate-pulse">&darr;</p>
+                        <p class="text-4xl font-bold text-gray-700">Context-Grounded Verification</p>
+                        <p class="text-7xl my-4 text-gray-900 animate-pulse">&darr;</p>
+                        <p class="text-4xl font-extrabold text-green-700">Verified Action (Execute)</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Strategic Impact: The Triad of Liberation -->
-    <section id="impact" class="py-24" style="background-color: var(--color-light-gray);">
+    <!-- 4. Strategic Impact: The Triad of Liberation - 4 Use Cases -->
+    <section id="impact" class="py-32" style="background-color: var(--color-light-gray);">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="section-heading max-w-4xl mx-auto">
-                The New Operating Model: High-Value Allocation.
+            <h2 class="section-heading max-w-5xl mx-auto">
+                Digital Employees in Action: Where Value is Created.
             </h2>
-            <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-                Digital Employees manage complexity; your humans drive strategy.
+            <p class="mt-6 text-xl text-gray-800 max-w-4xl mx-auto">
+                We reallocate human ingenuity from robot work to high-level strategy across four mission-critical areas.
             </p>
 
-            <div class="mt-16 grid lg:grid-cols-3 gap-8 text-left">
+            <div class="mt-20 grid lg:grid-cols-2 xl:grid-cols-4 gap-8 text-left">
+                
                 <!-- Agent 1: Autonomous Auditor (Finance) -->
                 <div class="feature-card bg-white shadow-xl">
-                    <div class="text-3xl font-extrabold text-gray-900">1. Finance</div>
+                    <div class="text-4xl font-extrabold text-gray-900">Finance</div>
                     <h3 class="mt-2 text-xl font-semibold text-gray-700">The Autonomous Auditor</h3>
-                    <p class="mt-4 text-gray-600">Intercepts, cross-references, and processes invoices against POs/Contracts in **3 seconds** (vs. 15 minutes). It eliminates cash leakage from duplicate or incorrect payments.</p>
-                    <p class="mt-6 font-semibold text-gray-900">Impact: 99.9% accuracy on standard invoices. 1200+ human hours recovered monthly.</p>
+                    <p class="mt-4 text-gray-600"><strong>Surgically eliminates cash leakage</strong> by intercepting, cross-referencing, and processing 5,000+ invoices against POs/Contracts in <strong>3 seconds</strong> (vs. 15 minutes of human time).</p>
+                    <p class="mt-6 font-semibold text-gray-900">Outcome: 99.9% verifiable payment accuracy. Over 1,200 human hours recovered monthly.</p>
                 </div>
                 
                 <!-- Agent 2: Always-On SDR (Sales) -->
                 <div class="feature-card bg-white shadow-xl">
-                    <div class="text-3xl font-extrabold text-gray-900">2. Sales</div>
+                    <div class="text-4xl font-extrabold text-gray-900">Sales</div>
                     <h3 class="mt-2 text-xl font-semibold text-gray-700">The Always-On SDR</h3>
-                    <p class="mt-4 text-gray-600">Instantly qualifies leads 24/7. It researches LinkedIn, understands pain points, and sends a hyper-personalized outreach **within 2 minutes** of inquiry.</p>
-                    <p class="mt-6 font-semibold text-gray-900">Impact: Recovers up to 400% of lost revenue. Sales team spends 100% of time on qualified, high-probability deals.</p>
+                    <p class="mt-4 text-gray-600"><strong>Recovers lost revenue</strong> by instantly qualifying leads 24/7. Researches LinkedIn, identifies pain points, and sends hyper-personalized outreach within <strong>120 seconds</strong>.</p>
+                    <p class="mt-6 font-semibold text-gray-900">Outcome: Converts leads missed outside of business hours. Sales team focuses 100% on closing deals, not qualifying leads.</p>
                 </div>
 
                 <!-- Agent 3: Dynamic Router (Supply Chain/Ops) -->
                 <div class="feature-card bg-white shadow-xl">
-                    <div class="text-3xl font-extrabold text-gray-900">3. Operations</div>
-                    <h3 class="mt-2 text-xl font-semibold text-gray-700">The Dynamic Router</h3>
-                    <p class="mt-4 text-gray-600">Continuously monitors sensor data, global news (strikes, weather), and geopolitical events. It **proactively re-routes** shipments or **autonomously orders** spare parts for machine prevention.</p>
-                    <p class="mt-6 font-semibold text-gray-900">Impact: Moves from reactive crisis management to true predictive prevention, eliminating unexpected downtime costs.</p>
+                    <div class="text-4xl font-extrabold text-gray-900">Operations</div>
+                    <h3 class="mt-2 text-xl font-semibold text-gray-700">The Predictive Guardian</h3>
+                    <p class="mt-4 text-gray-600">Continuously monitors global, environmental, and sensor data (e.g., vibration/heat). <strong>Proactively re-routes shipments</strong> or <strong>autonomously orders spare parts 2 weeks in advance</strong>.</p>
+                    <p class="mt-6 font-semibold text-gray-900">Outcome: Zero unexpected downtime. Shifts management from reactive crisis control to true predictive prevention.</p>
+                </div>
+
+                <!-- Agent 4: Talent Concierge (HR) -->
+                <div class="feature-card bg-white shadow-xl">
+                    <div class="text-4xl font-extrabold text-gray-900">Human Resources</div>
+                    <h3 class="mt-2 text-xl font-semibold text-gray-700">The Talent Concierge</h3>
+                    <p class="mt-4 text-gray-600"><strong>Accelerates hiring velocity</strong> by screening 1,000+ resumes in minutes against specific job criteria, or instantly answering 60% of repetitive policy questions.</p>
+                    <p class="mt-6 font-semibold text-gray-900">Outcome: Liberates HR staff for high-touch interactions and strategic talent development, not administrative screening.</p>
                 </div>
             </div>
         </div>
@@ -227,19 +245,29 @@
 
     <!-- 5. The Economic Thesis: Efficiency Arbitrage -->
     <section id="value" class="py-32 bg-white text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="section-heading max-w-3xl mx-auto">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="section-heading max-w-4xl mx-auto">
                 Efficiency Arbitrage: The CEO's Financial Mandate.
             </h2>
-            <p class="mt-6 text-xl text-gray-600 font-medium">
-                We deliver Silicon Valley-grade architecture at low overhead. The calculation is simple: you gain <span class="text-gray-900 font-semibold">2X output for 1X salary cost.</span>
+            <p class="mt-6 text-2xl text-gray-800 font-medium">
+                We deliver world-class engineering architecture at a low-overhead cost structure. The result is a guaranteed doubling of your high-value output.
             </p>
 
-            <div class="mt-12 bg-gray-50 p-10 rounded-2xl border border-gray-100" style="background-color: var(--color-light-gray);">
-                <p class="text-2xl font-medium text-gray-700">We Sell <span class="text-gray-900 font-extrabold">Outcomes,</span> Not Consultant Hours.</p>
-                <div class="mt-6 text-lg text-gray-600 space-y-2">
-                    <p><strong>Traditional Consulting:</strong> High overhead, massive teams, fixed billing on time (selling hours).</p>
-                    <p><strong>21ce.ai Agentic Workflow:</strong> Lean engineering, AI agents, billing based on deployed, measurable efficiency gains (selling outcomes).</p>
+            <div class="mt-16 grid md:grid-cols-3 gap-8 text-left">
+                <div class="p-8 border-r border-gray-100">
+                    <div class="text-6xl font-bold text-gray-900">1x</div>
+                    <p class="text-xl mt-4 font-semibold">Your Current Salary Base</p>
+                    <p class="text-lg text-gray-600 mt-2">Paid to humans who spend 40% of their time on repetitive "robot work."</p>
+                </div>
+                <div class="p-8 bg-yellow-50/20 rounded-lg">
+                    <div class="text-6xl font-bold text-yellow-700">0.5x</div>
+                    <p class="text-xl mt-4 font-semibold text-gray-900">Digital Employee Cost</p>
+                    <p class="text-lg text-gray-600 mt-2">The streamlined, low-overhead cost to perform all the robot work with 99.9% accuracy.</p>
+                </div>
+                <div class="p-8 border-l border-gray-100">
+                    <div class="text-6xl font-bold text-green-700">2x</div>
+                    <p class="text-xl mt-4 font-semibold">Net High-Value Output</p>
+                    <p class="text-lg text-gray-600 mt-2">The output you achieve when your best people are liberated to focus purely on strategy, innovation, and negotiation.</p>
                 </div>
             </div>
         </div>
@@ -248,20 +276,20 @@
     <!-- 6. Call to Action (CTA) -->
     <section id="cta" class="py-32 bg-gray-900 text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="section-heading text-white">
-                Determine Your Cost of Inaction.
+            <h2 class="section-heading text-white tracking-tight">
+                Determine Your True Cost of Inaction.
             </h2>
             <p class="mt-6 text-2xl text-gray-200 font-light">
-                Take the first step with zero risk. Let us surgically identify your most expensive operational bottleneck and map the exact Agentic solution.
+                We guarantee the first step is the most strategic. Let us surgically identify your most expensive operational bottleneck and map the exact Agentic solution—risk-free.
             </p>
-            <div class="mt-10">
-                <a href="#" class="apple-button text-xl bg-white text-gray-900 border-white hover:opacity-90">
-                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    Book Your Complimentary Workflow Friction Audit
+            <div class="mt-12">
+                <a href="contact@21ce.ai" class="apple-button text-2xl bg-white text-gray-900 border-white hover:opacity-95">
+                    <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Book Your Confidential Friction Audit Now
                 </a>
             </div>
             <p class="mt-8 text-sm text-gray-500">
-                No massive up-front commitment. Just clear ROI projection against a problem you can measure.
+                No massive up-front commitment. Just clear, data-driven ROI projection against a problem you can measure.
             </p>
         </div>
     </section>
@@ -269,7 +297,7 @@
     <!-- Footer -->
     <footer class="py-12 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500">
-            &copy; 2025 21ce.ai. All rights reserved. | Agentic AI, RAG, & LangChain Specialists.
+            &copy; 2025 21ce.ai. All rights reserved. | Agents That Execute.
         </div>
     </footer>
 
